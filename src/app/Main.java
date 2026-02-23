@@ -47,7 +47,7 @@ public class Main {
         } catch (IllegalArgumentException e) {
             consola.mostrarMensaje("Error: " + e.getMessage());
         }
-
+    
         // ===== EJEMPLO 2 (NUEVO) =====
         try {
             consola.mostrarMensaje("\nPrestando 'El Hobbit' a Carlos...");
