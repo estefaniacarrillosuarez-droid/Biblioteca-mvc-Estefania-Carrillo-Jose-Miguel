@@ -29,6 +29,7 @@ public class Main {
         consola.mostrarResumenLibros(gestor);
         consola.mostrarResumenUsuarios(gestor);
 
+        // ===== EJEMPLO 1 =====
         try {
             consola.mostrarMensaje("\nPrestando libro a Ana...");
             gestor.prestarLibro("978-01", "U001");
@@ -45,6 +46,29 @@ public class Main {
             consola.mostrarMensaje("Devolucion realizada");
         } catch (IllegalArgumentException e) {
             consola.mostrarMensaje("Error: " + e.getMessage());
+        }
+
+        // ===== EJEMPLO 2 (NUEVO) =====
+        try {
+            consola.mostrarMensaje("\nPrestando 'El Hobbit' a Carlos...");
+            gestor.prestarLibro("978-03", "U002");
+            consola.mostrarMensaje("Prestamo realizado");
+        } catch (IllegalArgumentException e) {
+            consola.mostrarMensaje("Error: " + e.getMessage());
+        }
+
+        consola.mostrarResumenUsuarios(gestor);
+
+        // ===== EJEMPLO 3 (NUEVO - Error por falta de stock) =====
+        try {
+            consola.mostrarMensaje("\nIntentando prestar muchas veces '1984'...");
+            gestor.prestarLibro("978-02", "U001");
+            gestor.prestarLibro("978-02", "U002");
+            gestor.prestarLibro("978-02", "U001");
+            gestor.prestarLibro("978-02", "U002"); // Puede provocar error si no hay stock
+            consola.mostrarMensaje("Prestamos realizados");
+        } catch (IllegalArgumentException e) {
+            consola.mostrarMensaje("Error controlado: " + e.getMessage());
         }
 
         consola.mostrarMensaje("\nBuscando libros de fantasia...");
