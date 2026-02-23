@@ -56,7 +56,6 @@ public class Main {
             consola.mostrarMensaje("\nEl libro esta prestado a: " + usuarioConLibro.getNombre());
         } else {
             consola.mostrarMensaje("\nEl libro no esta prestado");
-
         }
     }
 }
