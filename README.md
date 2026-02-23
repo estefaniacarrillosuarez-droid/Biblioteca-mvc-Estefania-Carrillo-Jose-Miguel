@@ -16,3 +16,9 @@ Definir enums y validaciones.
 Documentación del código.
 
 José Miguel 
+
+Creación del main.
+Implementación de las clases:
+Consola.
+Usuarios.
+Gestor de biblioteca.
