@@ -69,6 +69,7 @@ public class Consola {
         System.out.println("\nLibros encontrados:");
         for (int i = 0; i < libros.length; i++) {
             System.out.println("- " + libros[i].getTitulo() + " (" + libros[i].getIsbn() + ")");
+            
         }
     }
 }
