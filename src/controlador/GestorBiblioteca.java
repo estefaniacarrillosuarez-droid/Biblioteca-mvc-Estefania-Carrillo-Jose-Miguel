@@ -163,5 +163,6 @@ public class GestorBiblioteca {
 
     public int getCantidadUsuarios() {
         return cantidadUsuarios;
+        
     }
 }
