@@ -76,7 +76,7 @@ public class Consola {
 
         for (int i = 0; i < libros.length; i++) {
 
-            if (libros[i] != null) {  // evita NullPointerException
+            if (libros[i] != null) {  
                 System.out.println("- " + libros[i].getTitulo()
                         + " (" + libros[i].getIsbn() + ")");
                 encontrado = true;
